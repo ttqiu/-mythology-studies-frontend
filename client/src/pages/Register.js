@@ -32,8 +32,9 @@ const Register = () => {
     <div className="grid items-center justify-center">
       <div className="w-full max-w-md space-y-8">
         <h1 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-          Register a new User
+          Sign Up
         </h1>
+        <label>Enter your details to register.</label>
       </div>
       <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
         <div class="mb-4">
@@ -113,8 +114,17 @@ const Register = () => {
                 formValues.confirmPassword === formValues.password)
             }
           >
-            Register
+            REGISTER
           </button>
+        </div>
+        <div color="gray" className="mt-4 text-center font-normal">
+          Already have an account?{' '}
+          <a
+            href="/signIn"
+            className="font-medium text-blue-500 transition-colors hover:text-blue-700"
+          >
+            Sign In
+          </a>
         </div>
       </form>
     </div>

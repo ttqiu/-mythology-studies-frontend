@@ -6,18 +6,19 @@ body {
   text-align: center;
   margin: 0em 1em;
   padding: 0em 1em;
+  /* background-color: white; */
 }
 
 .logo,
 .logo-wrapper {
   display: flex;
-  height: 10em;
-  padding: 0px 15px 10px 0px;
+  height: 6em;
+  padding: 0px 15px 5px 0px;
 }
 
 .icon-wrapper {
   display: flex;
-  padding: 0px 15px 10px 0px;
+  padding: 0px 15px 0px 0px;
 }
 
 .welcome {
@@ -47,10 +48,34 @@ nav a:hover {
 }
 
 .home-container {
-  margin: 10em;
+  display: grid;
   justify-content: center;
 }
 
 .form {
   margin: 4% 5%;
+}
+
+.profile {
+  margin: 3% 33%;
+}
+
+.welcome-signin {
+  background-color: #3f69f1;
+  border: 0;
+  border-radius: 4px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 1%;
+  color: rgb(255, 255, 255);
+}
+
+.welcome-signin:hover {
+  background-color: #2d489f;
+  color: white;
+}
+
+.logoimage {
+  height: 600px;
 }

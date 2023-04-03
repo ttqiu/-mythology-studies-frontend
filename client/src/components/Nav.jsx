@@ -3,7 +3,8 @@ import { HomeIcon } from '@heroicons/react/24/solid'
 import { UserCircleIcon } from '@heroicons/react/24/solid'
 import { InformationCircleIcon } from '@heroicons/react/24/solid'
 import { UserPlusIcon } from '@heroicons/react/24/solid'
-import { LockOpenIcon } from '@heroicons/react/24/solid'
+import { ArrowRightOnRectangleIcon } from '@heroicons/react/24/solid'
+import { ArrowLeftOnRectangleIcon } from '@heroicons/react/24/solid'
 
 const Nav = ({ user, handleLogOut }) => {
   let userOptions
@@ -24,7 +25,7 @@ const Nav = ({ user, handleLogOut }) => {
             <HomeIcon className="h-5 w-5" aria-hidden="true" />
           </Link>
           <Link onClick={handleLogOut} to="/">
-            Sign Out
+            <ArrowLeftOnRectangleIcon className="h-5 w-5" aria-hidden="true" />
           </Link>
           <Link to="/origin">Origin</Link>
           <Link to="/creature">Creature</Link>
@@ -51,15 +52,19 @@ const Nav = ({ user, handleLogOut }) => {
       <div className="icon-wrapper" style={{ fontWeight: 'bolder' }}>
         <Link to="/">
           <HomeIcon className="h-5 w-5" aria-hidden="true" />
+          <label>Home</label>
         </Link>
         <Link to="/register">
           <UserPlusIcon className="h-5 w-5" aria-hidden="true" />
+          <label>Register</label>
         </Link>
         <Link to="/signIn">
-          <LockOpenIcon className="h-5 w-5" aria-hidden="true" />
+          <ArrowRightOnRectangleIcon className="h-5 w-5" aria-hidden="true" />
+          <label>Sign In</label>
         </Link>
         <Link to="/about">
           <InformationCircleIcon className="h-5 w-5" aria-hidden="true" />
+          <label>About</label>
         </Link>
       </div>
     </nav>

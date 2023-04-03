@@ -37,37 +37,38 @@ const About = () => {
           discover the rich, diverse world of mythology.
         </p>
       </span>
-      <div className="about-us">
-        <div className="ting-ting-profile">
+      <div className="profile">
+        <div className="w-full rounded-lg shadow-md lg:max-w-sm">
           <img
-            className="ting-ting"
-            src={'https://imagizer.imageshack.com/img922/4452/yiTkeY.jpg'}
-            alt=""
+            className="object-cover w-full h-60"
+            src="https://imagizer.imageshack.com/img922/4452/yiTkeY.jpg"
+            alt="profile"
           />
-          <a
-            className="ting-ting-git"
-            href="https://github.com/ttqiu"
-            target="blank"
-          >
-            <img
-              className="github"
-              style={{ width: 30, height: 30 }}
-              src="https://i.imgur.com/AjmoOeq.png"
-              alt="github"
-            />
-          </a>
-          <a
-            className="ting-ting-linkedIn"
-            href="https://www.linkedin.com/in/ting-ting-qiu-062587246/"
-            target="blank"
-          >
-            <img
-              className="linkedIn"
-              style={{ width: 30, height: 30 }}
-              src="https://i.imgur.com/N4ceP5A.png"
-              alt="linkedIn"
-            />
-          </a>
+          <div className="p-4">
+            <h4 className="text-xl font-semibold tracking-tight text-blue-600">
+              Ting Ting Qiu
+            </h4>
+            <p className="mb-2 leading-normal">Fullstack Software Engineer</p>
+            <div className="px-4 py-2 text-sm flex items-center justify-center space-x-8">
+              <a href="https://github.com/ttqiu" target="blank">
+                <img
+                  style={{ width: 30, height: 30 }}
+                  src="https://i.imgur.com/AjmoOeq.png"
+                  alt="github"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ting-ting-qiu-062587246/"
+                target="blank"
+              >
+                <img
+                  style={{ width: 30, height: 30 }}
+                  src="https://i.imgur.com/N4ceP5A.png"
+                  alt="linkedIn"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
