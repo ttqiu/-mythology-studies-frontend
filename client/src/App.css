@@ -79,3 +79,9 @@ nav a:hover {
 .logoimage {
   height: 600px;
 }
+
+.about {
+  /* background-color: rgba(131, 156, 236, 0.6); */
+  padding: 1% 5% 0% 5%;
+  color: rgba(109, 99, 248, 0.5);
+}
