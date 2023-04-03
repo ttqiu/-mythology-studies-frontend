@@ -3,16 +3,17 @@ import { Link } from 'react-router-dom'
 const Nav = ({ user, handleLogOut }) => {
   let userOptions
   if (user) {
+    console.log(user)
     userOptions = (
       <nav>
         <div className="logo-wrapper" alt="logo">
-          {/* <img
+          <img
             className="logo"
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            src="https://img0.baidu.com/it/u=76554225,3692139133&fm=253&fmt=auto&app=138&f=PNG?w=434&h=629"
             alt="welcome banner"
-          /> */}
+          />
           <div className="welcome">
-            <h3>Welcome {user.userName}!</h3>
+            <h3>Welcome {user.email}!</h3>
           </div>
         </div>
         <div style={{ fontWeight: 'bolder' }}>
@@ -32,11 +33,11 @@ const Nav = ({ user, handleLogOut }) => {
   const publicOptions = (
     <nav>
       <div className="logo-wrapper" alt="logo">
-        {/* <img
+        <img
           className="logo"
-          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+          src="https://img0.baidu.com/it/u=76554225,3692139133&fm=253&fmt=auto&app=138&f=PNG?w=434&h=629"
           alt="welcome banner"
-        /> */}
+        />
       </div>
       <div style={{ fontWeight: 'bolder' }}>
         <Link to="/">Home</Link>

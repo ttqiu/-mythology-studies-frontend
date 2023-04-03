@@ -35,7 +35,7 @@ const Account = ({ user, account }) => {
         </li>
       </ul>
       <div className="panel" style={{ fontWeight: 'bolder' }}>
-        <h3>userName: {account.userName}</h3>
+        <h3>username: {account.userName}</h3>
         <h3>Email: {account.email}</h3>
       </div>
     </div>

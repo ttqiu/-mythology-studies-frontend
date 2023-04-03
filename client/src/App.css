@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,38 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.logo,
+.logo-wrapper {
+  display: flex;
+  height: 10em;
+  padding: 0px 15px 10px 0px;
+}
+
+.welcome {
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  justify-content: space-between;
+  align-items: center;
+  height: 6em;
+  padding: 10px 20px 0px 50px;
+}
+
+nav a {
+  text-decoration-color: rgba(30, 24, 108, 0.5);
+  color: rgba(30, 24, 108, 0.5);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  color: rgba(223, 47, 106, 0.5);
+  text-decoration-color: rgba(223, 47, 106, 0.5);
 }
