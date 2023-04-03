@@ -4,7 +4,7 @@ const Home = () => {
   let navigate = useNavigate()
 
   return (
-    <div className="home-container col">
+    <div className="home-container">
       <h1>Welcome To Mythology Studies!</h1>
       <section className="welcome-signin">
         <button onClick={() => navigate('/signin')}>

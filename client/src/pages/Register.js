@@ -29,53 +29,83 @@ const Register = () => {
   }
 
   return (
-    <div className="signin col">
-      <div className="card-overlay centered">
-        <form className="col" onSubmit={handleSubmit}>
-          <div className="input-wrapper">
-            <label htmlFor="userName">userName</label>
-            <input
-              onChange={handleChange}
-              name="userName"
-              type="text"
-              placeholder="Smith123"
-              value={formValues.userName}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
-            <input
-              onChange={handleChange}
-              name="email"
-              type="email"
-              placeholder="example@example.com"
-              value={formValues.email}
-              required
-            />
-          </div>
-
-          <div className="input-wrapper">
-            <label htmlFor="password">Password</label>
-            <input
-              onChange={handleChange}
-              type="password"
-              name="password"
-              value={formValues.password}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="confirmPassword">Confirm Password</label>
-            <input
-              onChange={handleChange}
-              type="password"
-              name="confirmPassword"
-              value={formValues.confirmPassword}
-              required
-            />
-          </div>
+    <div className="grid items-center justify-center">
+      <div className="w-full max-w-md space-y-8">
+        <h1 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+          Register a new User
+        </h1>
+      </div>
+      <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="userName"
+          >
+            Username
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+            name="userName"
+            type="text"
+            placeholder="Smith123"
+            value={formValues.userName}
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+            Email
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+            name="email"
+            type="text"
+            placeholder="Email Address"
+            value={formValues.email}
+            required
+          />
+        </div>
+        <div class="mb-6">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="password"
+          >
+            Password
+          </label>
+          <input
+            class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+            name="password"
+            type="text"
+            value={formValues.password}
+            placeholder="******************"
+            required
+          />
+          <p class="text-red-500 text-xs italic">Please choose a password.</p>
+        </div>
+        <div class="mb-6">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="confirmPassword"
+          >
+            Confirm Password
+          </label>
+          <input
+            class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+            name="confirmPassword"
+            type="text"
+            value={formValues.confirmPassword}
+            placeholder="******************"
+            required
+          />
+          <p class="text-red-500 text-xs italic">Please choose a password.</p>
+        </div>
+        <div class="flex items-center justify-center">
           <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             disabled={
               !formValues.userName ||
               !formValues.email ||
@@ -83,10 +113,10 @@ const Register = () => {
                 formValues.confirmPassword === formValues.password)
             }
           >
-            Sign In
+            Register
           </button>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   )
 }

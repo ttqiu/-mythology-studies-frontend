@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { SignInUser } from '../services/User'
-import { LockClosedIcon } from '@heroicons/react/20/solid'
+import { LockClosedIcon } from '@heroicons/react/24/solid'
 
 const SignIn = ({ setUser }) => {
   let navigate = useNavigate()
@@ -27,7 +27,7 @@ const SignIn = ({ setUser }) => {
           <img
             className="mx-auto h-20 w-auto"
             src="https://img2.baidu.com/it/u=867805479,1891299998&fm=253&fmt=auto&app=138&f=JPEG?w=621&h=500"
-            alt="Your Company"
+            alt="logo"
           />
           <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
             Sign in to your account
@@ -45,7 +45,7 @@ const SignIn = ({ setUser }) => {
                 type="email"
                 value={formValues.email}
                 required
-                className="relative block w-full rounded-b-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="relative block w-full rounded-t-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 placeholder="Email Adress"
               />
             </div>
