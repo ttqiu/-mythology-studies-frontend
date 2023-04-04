@@ -27,27 +27,6 @@ const PostComment = ({ user }) => {
   }
 
   return user ? (
-    // <div className="reviewContainer">
-    //   <div className="formBox">
-    //     <form onSubmit={handleSubmit}>
-    //       <h2>Post a comment!</h2>
-    //       <label htmlFor="content"></label>
-    //       <textarea
-    //         cols="40"
-    //         rows="5"
-    //         placeholder="Leave review here"
-    //         id="content"
-    //         onChange={handleChange}
-    //         value={createComment.content}
-    //       ></textarea>
-    //       <div>
-    //         <button className="formSubmit-btn" type="submit">
-    //           Send
-    //         </button>
-    //       </div>
-    //     </form>
-    //   </div>
-    // </div>
     <div>
       <h1 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
         Post a comment!
