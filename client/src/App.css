@@ -85,3 +85,7 @@ nav a:hover {
   padding: 1% 5% 0% 5%;
   color: rgba(109, 99, 248, 0.5);
 }
+
+.zodiac{
+  height: 20px;
+}

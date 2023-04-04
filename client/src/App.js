@@ -66,8 +66,16 @@ const App = () => {
           {/* <Route
             path="/account/setting"
             element={<AccountSetting user={user} account={account} />}
-          />
-          <Route path="/lobby" element={<Lobby user={user} />} />
+          /> */}
+          {/* <Route
+            path="/account/setting"
+            element={<AccountSetting user={user} account={account} />}
+          /> */}
+          {/* <Route
+            path="/account/setting"
+            element={<AccountSetting user={user} account={account} />}
+          /> */}
+          {/* <Route path="/lobby" element={<Lobby user={user} />} />
           <Route
             path="/creaturePreview/:name"
             element={<CreaturePreview user={user} />}
