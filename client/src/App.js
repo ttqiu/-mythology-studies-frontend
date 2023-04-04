@@ -10,7 +10,7 @@ import Home from './pages/Home'
 import Account from './pages/Account'
 import AccountSetting from './pages/AccountSetting'
 // import ClassEnrollment from './pages/ClassEnrollment'
-// import Lobby from './pages/Lobby'
+import Lobby from './pages/Lobby'
 // import ClassPreview from './pages/ClassPreview'
 // import ClassDetails from './pages/ClassDetails'
 import About from './pages/About'
@@ -68,15 +68,15 @@ const App = () => {
             element={<AccountSetting user={user} account={account} />}
           />
           {/* <Route
-            path="/account/setting"
-            element={<AccountSetting user={user} account={account} />}
+            path="/account/zodiac"
+            element={<AccountZodiac user={user} account={account} />}
           /> */}
           {/* <Route
-            path="/account/setting"
-            element={<AccountSetting user={user} account={account} />}
+            path="/account/favorite"
+            element={<AccountFavorite user={user} account={account} />}
           /> */}
-          {/* <Route path="/lobby" element={<Lobby user={user} />} />
-          <Route
+          <Route path="/lobby" element={<Lobby user={user} />} />
+          {/* <Route
             path="/creaturePreview/:name"
             element={<CreaturePreview user={user} />}
           /> */}
