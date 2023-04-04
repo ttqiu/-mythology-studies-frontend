@@ -32,6 +32,13 @@ const Account = ({ user, account }) => {
     }
   }
 
+  const handleDeleteZodiac = async (ZodiacId) => {
+    if (user) {
+      await Client.delete(`/api/zodiaclists/${user.id}/${ZodiacId}`)
+      navigate(0)
+    }
+  }
+
   return user ? (
     <div className="flex">
       <div className="flex flex-col h-screen p-3 bg-white shadow w-60">
@@ -117,6 +124,14 @@ const Account = ({ user, account }) => {
               Personality
             </dt>
             <dd className="text-lg font-semibold">{zodiac.personality}</dd>
+          </div>
+          <div className="flex justify-center py-3">
+            <button
+              onClick={() => handleDeleteZodiac(zodiac.id)}
+              className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Reset Zodiac
+            </button>
           </div>
         </dl>
       )}
