@@ -4,8 +4,8 @@
 
 body {
   text-align: center;
-  margin: 0em 1em 3em 1em;
-  padding: 0em 1em;
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 .logo,
@@ -75,12 +75,13 @@ nav a:hover {
 }
 
 .logoimage {
+  margin: 1%;
   height: 600px;
 }
 
 .about {
   padding: 1% 5% 0% 5%;
-  color: rgba(109, 99, 248, 0.5);
+  /* color: rgba(109, 99, 248, 0.5); */
 }
 
 .zodiac{

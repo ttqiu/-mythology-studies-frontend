@@ -42,7 +42,7 @@ const About = () => {
       <div className="profile">
         <div className="w-full rounded-lg shadow-md lg:max-w-sm">
           <img
-            className="object-cover w-full h-60"
+            className="object-cover w-full h-40"
             src="https://imagizer.imageshack.com/img922/4452/yiTkeY.jpg"
             alt="profile"
           />
