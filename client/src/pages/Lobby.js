@@ -2,6 +2,7 @@ import Search from '../components/Search'
 import { useState } from 'react'
 import { useNavigate, NavLink } from 'react-router-dom'
 import Client from '../services/api'
+import CreatureCard from '../components/CreatureCard'
 
 const Lobby = ({ user }) => {
   let navigate = useNavigate()
@@ -14,7 +15,6 @@ const Lobby = ({ user }) => {
     e.preventDefault()
     const response = await Client.get(`/api/creatures/name/${searchQuery}`)
     setSearchResults(response.data)
-    console.log(response.data)
     toggleSearched(true)
     setSearchQuery('')
   }
@@ -38,12 +38,7 @@ const Lobby = ({ user }) => {
               {searchResults.map((result) => (
                 <NavLink to={`/creatureDetails/${result.id}`} key={result.id}>
                   <div className="search-results">
-                    <img src={result.image} alt="creature"></img>
-                    <h3>{result.name}</h3>
-                    <label>Origins: </label>
-                    {result.origins.map((r) => (
-                      <p>{r.origin}</p>
-                    ))}
+                    <CreatureCard name={result.name} image={result.image} />
                   </div>
                 </NavLink>
               ))}
