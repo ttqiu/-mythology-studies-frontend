@@ -26,7 +26,7 @@ const SignIn = ({ setUser }) => {
         <div>
           <img
             className="mx-auto h-20 w-auto"
-            src="https://img2.baidu.com/it/u=867805479,1891299998&fm=253&fmt=auto&app=138&f=JPEG?w=621&h=500"
+            src="https://i.imgur.com/5V4z6EY.png"
             alt="logo"
           />
           <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">

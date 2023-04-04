@@ -15,7 +15,7 @@ const Nav = ({ user, handleLogOut, account }) => {
         <div className="logo-wrapper" alt="logo">
           <img
             className="logo"
-            src="https://img0.baidu.com/it/u=76554225,3692139133&fm=253&fmt=auto&app=138&f=PNG?w=434&h=629"
+            src="https://i.imgur.com/dZoAPhy.png"
             alt="welcome banner"
           />
         </div>
@@ -50,7 +50,7 @@ const Nav = ({ user, handleLogOut, account }) => {
       <div className="logo-wrapper" alt="logo">
         <img
           className="logo"
-          src="https://img0.baidu.com/it/u=76554225,3692139133&fm=253&fmt=auto&app=138&f=PNG?w=434&h=629"
+          src="https://i.imgur.com/dZoAPhy.png"
           alt="welcome banner"
         />
       </div>

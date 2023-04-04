@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Client from '../services/api'
 import { PhotoIcon } from '@heroicons/react/24/solid'
 
-const PostComment = ({ user }) => {
+const CreatureForm = ({ user }) => {
   let navigate = useNavigate()
 
   const initialState = {
@@ -18,7 +18,6 @@ const PostComment = ({ user }) => {
       ...createCreature,
       [event.target.name]: event.target.value
     })
-    console.log(createCreature)
   }
 
   const handleSubmit = async (event) => {
@@ -41,7 +40,7 @@ const PostComment = ({ user }) => {
             className="block text-gray-700 text-sm font-bold mb-2"
             htmlFor="name"
           >
-            name
+            Name
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -137,4 +136,4 @@ const PostComment = ({ user }) => {
   )
 }
 
-export default PostComment
+export default CreatureForm
