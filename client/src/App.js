@@ -18,6 +18,7 @@ import About from './pages/About'
 import CommentForm from './components/CommentForm'
 import UpdateComment from './components/UpdateComment'
 import CreatureForm from './components/CreatureForm'
+import UpdateCreature from './components/UpdateCreature'
 import OriginDetails from './pages/OriginDetails'
 
 const App = () => {
@@ -89,6 +90,10 @@ const App = () => {
             element={<UpdateComment user={user} />}
           />
           <Route path="/creatures/add" element={<CreatureForm user={user} />} />
+          <Route
+            path="/creatures/update/:id"
+            element={<UpdateCreature user={user} />}
+          />
           <Route
             path="/creatureDetails/:id"
             element={<CreatureDetails user={user} account={account} />}

@@ -27,6 +27,13 @@ const CreatureDetails = ({ user }) => {
     }
   }
 
+  const handleDeleteOriginList = async (originId) => {
+    if (user) {
+      await Client.delete(`/api/originlists/${originId}/${id}`)
+      getCreatureDetails()
+    }
+  }
+
   // const handleFavorite = async () => {
   //   if (user) {
   //     await Client.post(`/api/favorite/${user.id}/${creatureDetails.id}`, {
@@ -76,8 +83,16 @@ const CreatureDetails = ({ user }) => {
                 className="font-medium text-blue-500 transition-colors hover:text-blue-700 cursor-pointer"
               >
                 <p onClick={() => navigate(`/origins/${origin.id}`)}>
-                  {origin.origin}{' '}
+                  {origin.origin}
                 </p>
+                {user?.id === 27 && (
+                  <button
+                    className="mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    onClick={() => handleDeleteOriginList(origin.id)}
+                  >
+                    Delete Origins
+                  </button>
+                )}
               </div>
             ))}
           </div>
@@ -85,7 +100,9 @@ const CreatureDetails = ({ user }) => {
             <div className="creatureButton">
               <div className="creatureButton1">
                 <button
-                  onClick={() => navigate(`/creatures/update/${user.id}/${id}`)}
+                  onClick={() =>
+                    navigate(`/creatures/update/${creatureDetails.id}`)
+                  }
                   className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Update Creature
