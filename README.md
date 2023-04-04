@@ -45,22 +45,22 @@ This website is designed to be a one-stop-shop for anyone interested in explorin
 
 ##### image header 1
 
-![Screenshots1]()
+![Screenshots1](https://i.imgur.com/55xdhR1.png)
 
 ##### image header 2
 
-![Screenshots2]()
+![Screenshots2](https://i.imgur.com/k1YOUaL.png)
 
 ##### image header 3
 
-![Screenshots3]()
+![Screenshots3](https://i.imgur.com/VfqgqYy.png)
 
 ### **_Future Updates_**
 
 - [ ] Add multiple languages
 - [ ] more types of mythology studies
 - [ ] dropbox for images and videos
-- [ ] Two different user accounts
+- [x] Two different user accounts
 
 ## **_Credits_**
 
