@@ -58,26 +58,20 @@ const Account = ({ user, account }) => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-12">
-        <div className="grid gap-20 mb-6">
-          <div>
-            <div className="text-sm font-medium text-gray-500 truncate">
-              Username
-            </div>
-            <div className="mt-1 text-3xl font-semibold text-gray-900">
-              <h3>username: {account.userName}</h3>
-            </div>
-          </div>
-          <div>
-            <div className="text-sm font-medium text-gray-500 truncate">
-              Email
-            </div>
-            <div className="mt-1 text-3xl font-semibold text-gray-900">
-              <h3>Email: {account.email}</h3>
-            </div>
-          </div>
+      <dl className=" mx-auto mt-12 max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
+        <div className="flex flex-col pb-3">
+          <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
+            username
+          </dt>
+          <dd className="text-lg font-semibold">{account.userName}</dd>
         </div>
-      </div>
+        <div className="flex flex-col py-3">
+          <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
+            Email address
+          </dt>
+          <dd className="text-lg font-semibold">{account.email}</dd>
+        </div>
+      </dl>
     </div>
   ) : (
     <div className="protected">

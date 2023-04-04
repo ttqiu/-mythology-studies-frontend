@@ -9,10 +9,11 @@ import SignIn from './pages/SignIn'
 import Home from './pages/Home'
 import Account from './pages/Account'
 import AccountSetting from './pages/AccountSetting'
-// import ClassEnrollment from './pages/ClassEnrollment'
+// import AccountZodiac from './pages/AccountZodiac'
+// import AccountFavortie from './pages/AccountFavortie'
 import Lobby from './pages/Lobby'
-// import ClassPreview from './pages/ClassPreview'
-// import ClassDetails from './pages/ClassDetails'
+import CreaturePreview from './pages/CreaturePreview'
+// import CreatureDetails from './pages/CreatureDetails'
 import About from './pages/About'
 import CommentForm from './components/CommentForm'
 import UpdateComment from './components/UpdateComment'
@@ -76,10 +77,7 @@ const App = () => {
             element={<AccountFavorite user={user} account={account} />}
           /> */}
           <Route path="/lobby" element={<Lobby user={user} />} />
-          {/* <Route
-            path="/creaturePreview/:name"
-            element={<CreaturePreview user={user} />}
-          /> */}
+          <Route path="/creatures/" element={<CreaturePreview user={user} />} />
           <Route
             path="/form/:userId/:creatureId"
             element={<CommentForm user={user} />}

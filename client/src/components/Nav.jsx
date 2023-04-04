@@ -5,11 +5,11 @@ import { InformationCircleIcon } from '@heroicons/react/24/solid'
 import { UserPlusIcon } from '@heroicons/react/24/solid'
 import { ArrowRightOnRectangleIcon } from '@heroicons/react/24/solid'
 import { ArrowLeftOnRectangleIcon } from '@heroicons/react/24/solid'
+import { ChevronDownIcon } from '@heroicons/react/24/solid'
 
 const Nav = ({ user, handleLogOut }) => {
   let userOptions
   if (user) {
-    // console.log(user)
     userOptions = (
       <nav>
         <div className="logo-wrapper" alt="logo">
@@ -27,8 +27,27 @@ const Nav = ({ user, handleLogOut }) => {
           <Link onClick={handleLogOut} to="/">
             <ArrowLeftOnRectangleIcon className="h-5 w-5" aria-hidden="true" />
           </Link>
-          <Link to="/origin">Origin</Link>
-          <Link to="/creature">Creature</Link>
+          {/* <Link to="/origins"> */}
+          <div className="dropdown">
+            <label tabIndex={0} className="welcome">
+              Origins
+            </label>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <Link to="/origins/greek">
+                  <a>Ancient Greek</a>
+                </Link>
+              </li>
+              <li>
+                <a>Item 2</a>
+              </li>
+            </ul>
+          </div>
+          {/* </Link> */}
+          <Link to="/creatures">Creature</Link>
           <Link to="/account">
             <UserCircleIcon className="h-5 w-5" aria-hidden="true" />
           </Link>

@@ -22,7 +22,7 @@ body {
 }
 
 .welcome {
-  justify-content: center;
+  /* justify-content: center; */
   color: rgba(109, 99, 248, 0.5)
 }
 
@@ -81,7 +81,6 @@ nav a:hover {
 }
 
 .about {
-  /* background-color: rgba(131, 156, 236, 0.6); */
   padding: 1% 5% 0% 5%;
   color: rgba(109, 99, 248, 0.5);
 }
@@ -93,8 +92,8 @@ nav a:hover {
 .update {
   display: flex;
   justify-content: center;
-  gap: 5em;
-  margin: 4% 15% 0% 15%;
+  gap: 3em;
+  margin: 5% 15% 0% 15%
 }
 
 .search {
@@ -107,14 +106,14 @@ nav a:hover {
 .container-grid {
   padding: 1em;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(auto-fill, 250px);
   grid-gap: 2em;
   justify-content: center;
 }
 
 .creature-card img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }
 
 .recent-add {
