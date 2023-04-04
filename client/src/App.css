@@ -149,3 +149,14 @@ nav a:hover {
   margin: auto;
   text-align: center;
 }
+
+.creatureButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1% 1%;
+}
+
+.creatureButton1 {
+  margin: 0% 1%;
+}

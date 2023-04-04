@@ -39,7 +39,7 @@ const UpdateComment = ({ user }) => {
               id="content"
               onChange={handleChange}
               value={updateComment.content}
-              class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+              className="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
               placeholder="Update your comment..."
               required
             ></textarea>

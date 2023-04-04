@@ -33,6 +33,12 @@ const Nav = ({ user, handleLogOut }) => {
           <Link to="/account">
             <UserCircleIcon className="h-5 w-5" aria-hidden="true" />
           </Link>
+          {user.id === 27 && (
+            <div>
+              <Link to="/creatures/add">Add Creatures</Link>
+              <Link to="/origins/add">Add Origin</Link>
+            </div>
+          )}
           <Link to="/about">
             <InformationCircleIcon className="h-5 w-5" aria-hidden="true" />
           </Link>

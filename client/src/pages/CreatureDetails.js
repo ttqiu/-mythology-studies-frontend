@@ -20,15 +20,28 @@ const CreatureDetails = ({ user }) => {
     getCreatureDetails()
   }, [id])
 
+  const handleDeleteCreature = async (id) => {
+    if (user) {
+      await Client.delete(`/api/creatures/${id}`)
+      navigate('/creatures')
+    }
+  }
+
   // const handleFavorite = async () => {
   //   if (user) {
-  //     await Client.post(`/api/favorite/${user.id}/${CreatureDetails.id}`)
+  //     await Client.post(`/api/favorite/${user.id}/${creatureDetails.id}`, {
+  //       userId: user.id,
+  //       CreatureId: creatureDetails.id
+  //     })
   //   }
   // }
 
   // const handleUnFavorite = async () => {
   //   if (user) {
-  //     await Client.delete(`/api/favorite/${user.id}/${CreatureDetails.id}`)
+  //     await Client.delete(`/api/favorite/${user.id}/${creatureDetails.id}`,{
+  //       userId: user.id,
+  //       CreatureId: creatureDetails.id
+  //     })
   //   }
   // }
 
@@ -68,6 +81,26 @@ const CreatureDetails = ({ user }) => {
               </div>
             ))}
           </div>
+          {user?.id === 27 && (
+            <div className="creatureButton">
+              <div className="creatureButton1">
+                <button
+                  onClick={() => navigate(`/creatures/update/${user.id}/${id}`)}
+                  className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Update Creature
+                </button>
+              </div>
+              <div className="creatureButton1">
+                <button
+                  onClick={() => handleDeleteCreature(creatureDetails.id)}
+                  className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Delete Creature
+                </button>
+              </div>
+            </div>
+          )}
           {/* {!favorite && (
             <div>
               <button onClick={handleFavorite}>Enroll</button>
@@ -96,20 +129,24 @@ const CreatureDetails = ({ user }) => {
               Comment: {comment.content}
             </p>
             {user?.id === comment.userId && (
-              <button
-                onClick={() => navigate(`/updateForm/${id}/${comment.id}`)}
-                className="group relative mb-4 flex justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Update Comment
-              </button>
-            )}
-            {user?.id === comment.userId && (
-              <button
-                onClick={() => handleDeleteComment(comment.id)}
-                className="group relative mb-2 flex justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Delete Comment
-              </button>
+              <div className="creatureButton">
+                <div className="creatureButton1">
+                  <button
+                    onClick={() => navigate(`/updateForm/${id}/${comment.id}`)}
+                    className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    Update Comment
+                  </button>
+                </div>
+                <div className="creatureButton1">
+                  <button
+                    onClick={() => handleDeleteComment(comment.id)}
+                    className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    Delete Comment
+                  </button>
+                </div>
+              </div>
             )}
           </div>
         ))}
