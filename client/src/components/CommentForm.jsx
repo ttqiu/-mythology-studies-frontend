@@ -53,9 +53,9 @@ const PostComment = ({ user }) => {
         Post a comment!
       </h1>
       <form onSubmit={handleSubmit} className="form">
-        <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-          <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
-            <label for="content" class="sr-only">
+        <div className="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+          <div className="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
+            <label for="content" className="sr-only">
               Your comment
             </label>
             <textarea
@@ -68,10 +68,10 @@ const PostComment = ({ user }) => {
               required
             ></textarea>
           </div>
-          <div class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
+          <div className="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
             <button
               type="submit"
-              class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
+              className="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
             >
               Post comment
             </button>

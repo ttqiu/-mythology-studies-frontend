@@ -37,15 +37,15 @@ const Register = () => {
         <label>Enter your details to register.</label>
       </div>
       <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-        <div class="mb-4">
+        <div className="mb-4">
           <label
-            class="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-sm font-bold mb-2"
             for="userName"
           >
             Username
           </label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             onChange={handleChange}
             name="userName"
             type="text"
@@ -54,12 +54,15 @@ const Register = () => {
             required
           />
         </div>
-        <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            for="email"
+          >
             Email
           </label>
           <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             onChange={handleChange}
             name="email"
             type="text"
@@ -68,7 +71,7 @@ const Register = () => {
             required
           />
         </div>
-        <div class="mb-6">
+        <div className="mb-6">
           <label
             class="block text-gray-700 text-sm font-bold mb-2"
             for="password"
@@ -94,7 +97,7 @@ const Register = () => {
             Confirm Password
           </label>
           <input
-            class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             onChange={handleChange}
             name="confirmPassword"
             type="text"
@@ -102,11 +105,13 @@ const Register = () => {
             placeholder="******************"
             required
           />
-          <p class="text-red-500 text-xs italic">Please choose a password.</p>
+          <p className="text-red-500 text-xs italic">
+            Please choose a password.
+          </p>
         </div>
-        <div class="flex items-center justify-center">
+        <div className="flex items-center justify-center">
           <button
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             disabled={
               !formValues.userName ||
               !formValues.email ||

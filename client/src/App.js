@@ -13,7 +13,7 @@ import AccountSetting from './pages/AccountSetting'
 // import AccountFavortie from './pages/AccountFavortie'
 import Lobby from './pages/Lobby'
 import CreaturePreview from './pages/CreaturePreview'
-// import CreatureDetails from './pages/CreatureDetails'
+import CreatureDetails from './pages/CreatureDetails'
 import About from './pages/About'
 import CommentForm from './components/CommentForm'
 import UpdateComment from './components/UpdateComment'
@@ -86,10 +86,10 @@ const App = () => {
             path="/updateForm/:creatureId/:id"
             element={<UpdateComment user={user} />}
           />
-          {/* <Route
+          <Route
             path="/creatureDetails/:id"
             element={<CreatureDetails user={user} account={account} />}
-          /> */}
+          />
         </Routes>
       </main>
     </div>

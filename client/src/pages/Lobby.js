@@ -56,7 +56,7 @@ const Lobby = ({ user }) => {
         )}
       </div>
       <div className="recent-add">
-        <h3>Reacently Added</h3>
+        <h3>Recently Added</h3>
         <ul className="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
           {creatures.map((creature) => (
             <li

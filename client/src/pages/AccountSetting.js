@@ -79,6 +79,7 @@ const Account = ({ user, account }) => {
                   <img
                     className="zodiac"
                     src="https://static-s.aa-cdn.net/img/gp/20600002613700/srFXS6Y2Dc_g_PtOlxYzwnZCMfpqFFzT4Oxm7W7hlXoS3aivOHDtmrzmcyTOFE_1Qvc?v=1"
+                    alt="zodiac"
                   ></img>
                   <span>Zodiac</span>
                 </a>
