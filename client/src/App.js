@@ -8,7 +8,7 @@ import Register from './pages/Register'
 import SignIn from './pages/SignIn'
 import Home from './pages/Home'
 import Account from './pages/Account'
-// import AccountSetting from './pages/AccountSetting'
+import AccountSetting from './pages/AccountSetting'
 // import ClassEnrollment from './pages/ClassEnrollment'
 // import Lobby from './pages/Lobby'
 // import ClassPreview from './pages/ClassPreview'
@@ -63,10 +63,10 @@ const App = () => {
             path="/account/"
             element={<Account user={user} account={account} />}
           />
-          {/* <Route
+          <Route
             path="/account/setting"
             element={<AccountSetting user={user} account={account} />}
-          /> */}
+          />
           {/* <Route
             path="/account/setting"
             element={<AccountSetting user={user} account={account} />}

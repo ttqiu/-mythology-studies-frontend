@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { IdentificationIcon } from '@heroicons/react/24/solid'
 import { HeartIcon } from '@heroicons/react/24/solid'
-import { ArrowLeftOnRectangleIcon } from '@heroicons/react/24/solid'
 import { Cog6ToothIcon } from '@heroicons/react/24/solid'
 
 const Account = ({ user, account }) => {

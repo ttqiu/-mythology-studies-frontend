@@ -89,3 +89,10 @@ nav a:hover {
 .zodiac{
   height: 20px;
 }
+
+.update {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+  margin: 4% 15% 0% 15%;
+}
