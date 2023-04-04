@@ -32,13 +32,6 @@ const Account = ({ user, account }) => {
     }
   }
 
-  // const handleChange = (event) => {
-  //   setCreateComment({
-  //     ...createComment,
-  //     [event.target.id]: event.target.value
-  //   })
-  // }
-
   return user ? (
     <div className="flex">
       <div className="flex flex-col h-screen p-3 bg-white shadow w-60">
@@ -109,19 +102,6 @@ const Account = ({ user, account }) => {
               </button>
             </div>
           ))}
-          {/* <select>
-            {zodiacs.map((zo) => (
-              <div>
-                <option value={`${zo.id}`} key={zo.id}>
-                  {zo.zodiac}
-                </option>
-                <button
-                  onClick={handleZodiac(zo.id)}
-                  className="mb-4 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                ></button>
-              </div>
-            ))}
-          </select> */}
         </div>
       )}
       {zodiac.length !== 0 && (

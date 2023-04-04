@@ -29,26 +29,6 @@ const Nav = ({ user, handleLogOut }) => {
           <Link onClick={handleLogOut} to="/">
             <ArrowLeftOnRectangleIcon className="h-5 w-5" aria-hidden="true" />
           </Link>
-          {/* <Link to="/origins">Origins</Link> */}
-          {/* <div
-            onClick={() => setdropdownOpen(!dropdownOpen)}
-            className="welcome"
-          >
-            Origins
-          </div>
-
-          <div
-            className={`${
-              dropdownOpen ? `opacity-100 visible` : 'invisible opacity-0'
-            } absolute left-20 mt-6 rounded border-[.5px] border-light bg-white py-0 shadow-card transition-all`}
-          >
-            <a
-              href="javascript:void(0)"
-              className="block py-2 px-5 text-base font-semibold text-body-color hover:bg-primary hover:bg-opacity-5 hover:text-primary"
-            >
-              Dashboard
-            </a>
-          </div> */}
           <Link to="/creatures">Creatures</Link>
           <Link to="/account">
             <UserCircleIcon className="h-5 w-5" aria-hidden="true" />

@@ -23,9 +23,6 @@ const CreatureDetails = ({ user }) => {
       </div>
       <section>
         <div className="flex-row">
-          {/* <div className="image-container">
-            <img src={originDetails.image}></img>
-          </div> */}
           <div>
             <label className="block text-purple-700 font-bold mb-4">
               {originDetails.description}
