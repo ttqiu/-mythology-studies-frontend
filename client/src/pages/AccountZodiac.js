@@ -82,7 +82,7 @@ const Account = ({ user, account }) => {
 
   return user ? (
     <div className="flex">
-      <div className="flex flex-col h-screen p-3 bg-white shadow w-60">
+      <div className="flex flex-col h-screen p-3 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 shadow w-60">
         <div className="space-y-3">
           <div className="flex items-center">
             <h2 className="text-xl font-bold">User Information</h2>

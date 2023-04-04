@@ -69,8 +69,8 @@ const CreatureDetails = ({ user }) => {
           <div className="image-container">
             <img src={creatureDetails.image}></img>
           </div>
-          <div>
-            <label className="block text-gray-700 font-bold mb-4">
+          <div className="about">
+            <label className="block text-center text-gray-700 font-bold mb-4">
               {creatureDetails.description}
             </label>
           </div>
@@ -166,6 +166,7 @@ const CreatureDetails = ({ user }) => {
             )}
           </div>
         ))}
+        <h3 className="buttom"> .... </h3>
       </div>
     </div>
   ) : (
