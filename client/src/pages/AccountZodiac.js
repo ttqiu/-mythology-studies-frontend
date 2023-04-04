@@ -4,14 +4,55 @@ import Client from '../services/api'
 import { IdentificationIcon } from '@heroicons/react/24/solid'
 import { HeartIcon } from '@heroicons/react/24/solid'
 import { Cog6ToothIcon } from '@heroicons/react/24/solid'
+import { Calendar } from 'primereact/calendar'
+import 'primereact/resources/themes/lara-light-indigo/theme.css'
+import 'primereact/resources/primereact.min.css'
+import 'primeicons/primeicons.css'
 
 const Account = ({ user, account }) => {
   let navigate = useNavigate()
   const [zodiacs, setZodiacs] = useState([])
+  const [date, setDate] = useState(null)
+
   let zodiac = ''
   account.zodiac?.map((z) => {
     zodiac = z
   })
+
+  let year = null
+  let ZodiacId = null
+
+  if (date) {
+    let remain = null
+    year = new Date(date).getFullYear()
+    remain = 2023 % year
+    console.log(remain)
+    if (remain === 0) {
+      ZodiacId = 4
+    } else if (remain === 1) {
+      ZodiacId = 3
+    } else if (remain === 2) {
+      ZodiacId = 2
+    } else if (remain === 3) {
+      ZodiacId = 1
+    } else if (remain === 4) {
+      ZodiacId = 12
+    } else if (remain === 5) {
+      ZodiacId = 11
+    } else if (remain === 6) {
+      ZodiacId = 10
+    } else if (remain === 7) {
+      ZodiacId = 9
+    } else if (remain === 8) {
+      ZodiacId = 8
+    } else if (remain === 9) {
+      ZodiacId = 7
+    } else if (remain === 10) {
+      ZodiacId = 6
+    } else if (remain === 11) {
+      ZodiacId = 5
+    }
+  }
 
   const getZodaic = async () => {
     const response = await Client.get(`/api/zodiacs`)
@@ -93,22 +134,27 @@ const Account = ({ user, account }) => {
         </div>
       </div>
       {zodiac.length === 0 && (
-        <div>
-          <label htmlFor="zodiac">Zodiac: </label>
-          {zodiacs.map((zo) => (
-            <div key={zo.id} className="comment-container">
-              <h1>{zo.zodiac}</h1>
-              <label className="mb-2 text-gray-900 dark:text-white">
-                {zo.description}
-              </label>
-              <button
-                onClick={() => handleZodiac(zo.id)}
-                className="group relative mb-4 flex justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Select Zodiac
-              </button>
-            </div>
-          ))}
+        <div className="w-full max-w-md space-y-8">
+          <label
+            htmlFor="zodiac"
+            className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900"
+          >
+            Select Your Zodiac{' '}
+          </label>
+          <div>
+            <Calendar
+              value={date}
+              onChange={(e) => setDate(e.value)}
+              view="year"
+              dateFormat="yy"
+            />
+          </div>
+          <button
+            onClick={() => handleZodiac(ZodiacId)}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Select Zodiac
+          </button>
         </div>
       )}
       {zodiac.length !== 0 && (
