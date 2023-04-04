@@ -17,6 +17,7 @@ import CreatureDetails from './pages/CreatureDetails'
 import About from './pages/About'
 import CommentForm from './components/CommentForm'
 import UpdateComment from './components/UpdateComment'
+import OriginDetails from './pages/OriginDetails'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -90,6 +91,7 @@ const App = () => {
             path="/creatureDetails/:id"
             element={<CreatureDetails user={user} account={account} />}
           />
+          <Route path="/origins/:id" element={<OriginDetails user={user} />} />
         </Routes>
       </main>
     </div>

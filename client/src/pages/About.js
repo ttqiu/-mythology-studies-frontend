@@ -1,8 +1,10 @@
 const About = () => {
   return (
     <div className="about">
-      <h1 style={{ fontWeight: 'bolder' }}>About Page</h1>
-      <span style={{ fontWeight: 'bolder' }}>
+      <h1 className="mt-6 text-center text-3xl font-bold tracking-tight mb-4">
+        About Page
+      </h1>
+      <span className="block font-bold mb-4">
         <p>
           Welcome to the Mythology Studies website! Here, you'll discover a
           treasure trove of information about mystical creatures and their

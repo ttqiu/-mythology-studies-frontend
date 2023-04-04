@@ -8,13 +8,20 @@ const CreatureDetails = ({ user, account }) => {
   const [creatureDetails, setCreatureDetails] = useState({})
   const [comments, setComments] = useState([])
 
+  const getCreatureDetails = async () => {
+    const response = await Client.get(`/api/creatures/${id}`)
+    setCreatureDetails(response.data)
+    let comments = response.data.comments.slice(-10)
+    setComments(comments.reverse())
+  }
+
   useEffect(() => {
-    const getCreatureDetails = async () => {
-      const response = await Client.get(`/api/creatures/${id}`)
-      setCreatureDetails(response.data)
-      let comments = response.data.comments.slice(-10)
-      setComments(comments.reverse())
-    }
+    // const getCreatureDetails = async () => {
+    //   const response = await Client.get(`/api/creatures/${id}`)
+    //   setCreatureDetails(response.data)
+    //   let comments = response.data.comments.slice(-10)
+    //   setComments(comments.reverse())
+    // }
     getCreatureDetails()
   }, [id])
 
@@ -57,7 +64,8 @@ const CreatureDetails = ({ user, account }) => {
   const handleDeleteComment = async (id) => {
     if (user) {
       await Client.delete(`/api/comments/${id}`)
-      window.location.reload(false)
+      // navigate(0)
+      getCreatureDetails()
     }
   }
 
@@ -66,9 +74,9 @@ const CreatureDetails = ({ user, account }) => {
       <div className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
         <h1>{creatureDetails.name}</h1>
       </div>
-      <section className="details">
+      <section>
         <div className="flex-row">
-          <div className="detail">
+          <div className="image-container">
             <img src={creatureDetails.image}></img>
           </div>
           <div>
@@ -79,8 +87,13 @@ const CreatureDetails = ({ user, account }) => {
           <div className="block text-gray-700 font-bold mb-4">
             <h3>Origins: </h3>
             {creatureDetails.origins?.map((origin) => (
-              <div key={origin.id}>
-                <span>{origin.origin} </span>
+              <div
+                key={origin.id}
+                className="font-medium text-blue-500 transition-colors hover:text-blue-700 cursor-pointer"
+              >
+                <p onClick={() => navigate(`/origins/${origin.id}`)}>
+                  {origin.origin}{' '}
+                </p>
               </div>
             ))}
           </div>
