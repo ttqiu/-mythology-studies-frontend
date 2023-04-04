@@ -55,7 +55,6 @@ const CreatureDetails = ({ user }) => {
   const handleDeleteComment = async (id) => {
     if (user) {
       await Client.delete(`/api/comments/${id}`)
-      // navigate(0)
       getCreatureDetails()
     }
   }

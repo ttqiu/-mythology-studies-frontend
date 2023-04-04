@@ -19,7 +19,7 @@ const Account = ({ user, account }) => {
       e.preventDefault()
       await Client.put(`/api/users/updateUserDetails/${user.id}`, email)
       setEmail({ ...email })
-      window.location.reload(false)
+      navigate(0)
     }
   }
 
@@ -28,7 +28,7 @@ const Account = ({ user, account }) => {
       e.preventDefault()
       await Client.put(`/api/users/updateUserDetails/${user.id}`, userName)
       setPassword({ ...userName })
-      window.location.reload(false)
+      navigate(0)
     }
   }
 
@@ -37,7 +37,7 @@ const Account = ({ user, account }) => {
       e.preventDefault()
       await Client.put(`/api/users/updatePassword/${user.id}`, password)
       setPassword({ ...password })
-      window.location.reload(false)
+      navigate(0)
     }
   }
 

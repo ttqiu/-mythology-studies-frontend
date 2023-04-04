@@ -7,9 +7,7 @@ import { UserPlusIcon } from '@heroicons/react/24/solid'
 import { ArrowRightOnRectangleIcon } from '@heroicons/react/24/solid'
 import { ArrowLeftOnRectangleIcon } from '@heroicons/react/24/solid'
 
-const Nav = ({ user, handleLogOut }) => {
-  // const [dropdownOpen, setdropdownOpen] = useState(false)
-
+const Nav = ({ user, handleLogOut, account }) => {
   let userOptions
   if (user) {
     userOptions = (
@@ -22,7 +20,7 @@ const Nav = ({ user, handleLogOut }) => {
           />
         </div>
         <div style={{ fontWeight: 'bolder' }} className="icon-wrapper">
-          <h1 className="welcome">Welcome {user.email}!</h1>
+          <h1 className="welcome">Welcome {account.userName}!</h1>
           <Link to="/lobby">
             <HomeIcon className="h-5 w-5" aria-hidden="true" />
           </Link>

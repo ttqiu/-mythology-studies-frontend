@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Client from '../services/api'
-import { PhotoIcon } from '@heroicons/react/24/solid'
+// import { PhotoIcon } from '@heroicons/react/24/solid'
 
 const UpdateCreature = ({ user }) => {
   let navigate = useNavigate()

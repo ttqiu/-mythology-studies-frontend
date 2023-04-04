@@ -17,7 +17,7 @@ const Account = ({ user, account }) => {
             <ul className="pt-2 pb-4 space-y-1 text-sm">
               <li className="rounded-sm">
                 <a
-                  href="#"
+                  href="/account"
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
                   <IdentificationIcon className="h-5 w-5" aria-hidden="true" />
