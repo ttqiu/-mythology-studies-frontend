@@ -9,7 +9,7 @@ import SignIn from './pages/SignIn'
 import Home from './pages/Home'
 import Account from './pages/Account'
 import AccountSetting from './pages/AccountSetting'
-// import AccountZodiac from './pages/AccountZodiac'
+import AccountZodiac from './pages/AccountZodiac'
 // import AccountFavortie from './pages/AccountFavortie'
 import Lobby from './pages/Lobby'
 import CreaturePreview from './pages/CreaturePreview'
@@ -69,10 +69,10 @@ const App = () => {
             path="/account/setting"
             element={<AccountSetting user={user} account={account} />}
           />
-          {/* <Route
+          <Route
             path="/account/zodiac"
             element={<AccountZodiac user={user} account={account} />}
-          /> */}
+          />
           {/* <Route
             path="/account/favorite"
             element={<AccountFavorite user={user} account={account} />}
@@ -91,7 +91,10 @@ const App = () => {
             path="/creatureDetails/:id"
             element={<CreatureDetails user={user} account={account} />}
           />
-          <Route path="/origins/:id" element={<OriginDetails user={user} />} />
+          <Route
+            path="/origins/:id"
+            element={<OriginDetails user={user} account={account} />}
+          />
         </Routes>
       </main>
     </div>

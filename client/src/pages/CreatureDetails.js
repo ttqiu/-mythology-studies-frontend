@@ -2,11 +2,12 @@ import Client from '../services/api'
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
-const CreatureDetails = ({ user, account }) => {
+const CreatureDetails = ({ user }) => {
   let navigate = useNavigate()
   const { id } = useParams()
   const [creatureDetails, setCreatureDetails] = useState({})
   const [comments, setComments] = useState([])
+  // const [favorite, setFavorite] = useState({})
 
   const getCreatureDetails = async () => {
     const response = await Client.get(`/api/creatures/${id}`)
@@ -16,48 +17,18 @@ const CreatureDetails = ({ user, account }) => {
   }
 
   useEffect(() => {
-    // const getCreatureDetails = async () => {
-    //   const response = await Client.get(`/api/creatures/${id}`)
-    //   setCreatureDetails(response.data)
-    //   let comments = response.data.comments.slice(-10)
-    //   setComments(comments.reverse())
-    // }
     getCreatureDetails()
   }, [id])
 
-  // const origins = creatureDetails.origins
-
-  // const enrollButton = () => {
-  //   for (let i = 0; i < account.classes?.length; i++) {
-  //     if (account.classes[i].id === CreatureDetails?.id) {
-  //       enrolled = true
-  //       unenrolled = false
-  //       return
-  //     }
+  // const handleFavorite = async () => {
+  //   if (user) {
+  //     await Client.post(`/api/favorite/${user.id}/${CreatureDetails.id}`)
   //   }
   // }
 
-  // enrollButton()
-
-  // const handleEnrolled = async () => {
+  // const handleUnFavorite = async () => {
   //   if (user) {
-  //     await Client.post(`/api/classlists/${user.id}/${CreatureDetails.id}`)
-  //     await Client.put(`/api/users/updateUserDetails/${user.id}`, {
-  //       totalCredits: CreatureDetails.credits + account.totalCredits
-  //     })
-  //     setEnrolled(true)
-  //     window.location.reload(false)
-  //   }
-  // }
-
-  // const handleUnEnrolled = async () => {
-  //   if (user) {
-  //     await Client.delete(`/api/classlists/${user.id}/${CreatureDetails.id}`)
-  //     await Client.put(`/api/users/updateUserDetails/${user.id}`, {
-  //       totalCredits: account.totalCredits - CreatureDetails.credits
-  //     })
-  //     setUnEnrolled(true)
-  //     window.location.reload(false)
+  //     await Client.delete(`/api/favorite/${user.id}/${CreatureDetails.id}`)
   //   }
   // }
 
@@ -97,14 +68,14 @@ const CreatureDetails = ({ user, account }) => {
               </div>
             ))}
           </div>
-          {/* {!enrolled && (
+          {/* {!favorite && (
             <div>
-              <button onClick={handleEnrolled}>Enroll</button>
+              <button onClick={handleFavorite}>Enroll</button>
             </div>
           )}
-          {!unenrolled && (
+          {favorite && (
             <div>
-              <button onClick={handleUnEnrolled}>Withdraw</button>
+              <button onClick={handleUnFavorite}>Withdraw</button>
             </div>
           )} */}
         </div>
